@@ -65,6 +65,7 @@ and
 - Waveform: `1` (sine), `2` (square), `3` (saw)
 - Volume: `-` / `+`
 - Panic (stop all): `Esc`
+- **Recording**: `Tab` (start/stop recording)
 
 ## Notes
 
@@ -79,7 +80,7 @@ MIT
 
 ## New: Recording to WAV
 
-- Press **R** to **start/stop recording**. While recording, you'll see `REC ●` in red.
+- Press **Tab** to **start/stop recording**. While recording, you'll see `REC ●` in red.
 - When you stop, a file like `recording_YYYYmmdd_HHMMSS.wav` is saved in the current folder.
 - The recorder logs note events (start/end, pitch, waveform, volume) and renders an offline mix, so it's clean and free of system noise.
 - Sustain is respected: if you release a key while sustain is ON, the note ends when you toggle sustain OFF.
