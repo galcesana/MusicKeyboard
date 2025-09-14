@@ -1,4 +1,4 @@
-# Keyboard Piano (Python)
+# Keyboard Piano
 
 Turn your **computer keyboard** into a mini piano 🎹 — no MIDI keyboard required.
 
