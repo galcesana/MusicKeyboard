@@ -11,7 +11,7 @@ def main():
     pygame.mixer.pre_init(SAMPLE_RATE, BITSIZE, CHANNELS, AUDIO_BUFFER)
     pygame.init()
     screen = pygame.display.set_mode((820, 240))
-    pygame.display.set_caption("Keyboard Piano 🎹  [Space: sustain | [: octave- | ]: octave+ | 1/2/3: wave | +/-: volume | R: rec | Esc: panic]")
+    pygame.display.set_caption("Keyboard Piano 🎹  [Space: sustain | [: octave- | ]: octave+ | 1/2/3: wave | +/-: volume | Tab: rec | Esc: panic]")
     font = pygame.font.SysFont(None, 22)
 
     current_octave = BASE_OCTAVE
@@ -38,7 +38,7 @@ def main():
         if status_msg:
             sm = font.render(status_msg, True, (180,220,180))
             screen.blit(sm, (16, 130))
-        hint = "[Space] sustain | [ / ] octave | 1/2/3 wave | +/- volume | R record | Esc panic"
+        hint = "[Space] sustain | [ / ] octave | 1/2/3 wave | +/- volume | Tab record | Esc panic"
         hint_img = font.render(hint, True, (180,180,180))
         screen.blit(hint_img, (16, 160))
         pygame.display.flip()
@@ -93,7 +93,7 @@ def main():
                                     active_channels.pop(k, None)
                     last_space_time = now
                     draw_ui(status); continue
-                if key == pygame.K_r:
+                if key == pygame.K_TAB:
                     if recorder.is_recording:
                         path = recorder.stop(); status = f"Saved: {path}" if path else "Nothing to save."
                     else:
