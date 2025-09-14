@@ -1,0 +1,14 @@
+# Ignore audio files
+*.wav
+
+# Ignore Python cache and compiled files
+__pycache__/
+*.pyc
+
+# Ignore virtual environments
+.venv/
+venv/
+
+# Ignore IDE/editor settings
+.vscode/
+.idea/
